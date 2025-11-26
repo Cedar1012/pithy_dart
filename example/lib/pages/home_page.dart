@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pithy_dart/pithy_dart.dart';
+import '../utils/responsive.dart';
 import 'widget_extension_page.dart';
 import 'text_extension_page.dart';
 import 'list_extension_page.dart';
@@ -159,12 +160,12 @@ class HomePage extends StatelessWidget {
           }
 
           return GridView.builder(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20.rw),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: crossAxisCount,
               childAspectRatio: childAspectRatio,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
+              crossAxisSpacing: 16.rw,
+              mainAxisSpacing: 16.rh,
             ),
             itemCount: examples.length,
             itemBuilder: (context, index) {
@@ -182,37 +183,37 @@ class HomePage extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: Material(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.rr),
         elevation: 1,
         shadowColor: example.color.withOpacity(0.2),
         child: InkWell(
           onTap: () {
             context.navigator.pushMaterial(example.page);
           },
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12.rr),
           child: Center(
             child: Padding(
-              padding: EdgeInsets.all(12),
+              padding: EdgeInsets.all(12.rw),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 80,
-                    height: 80,
+                    width: 80.rw,
+                    height: 80.rw,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [example.color.withOpacity(0.8), example.color],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.rr),
                       boxShadow: [
                         BoxShadow(
                           color: example.color.withOpacity(0.25),
-                          blurRadius: 8,
-                          offset: Offset(0, 3),
+                          blurRadius: 8.rr,
+                          offset: Offset(0, 3.rh),
                         ),
                       ],
                     ),
@@ -220,15 +221,15 @@ class HomePage extends StatelessWidget {
                       child: Icon(
                         example.icon,
                         color: Colors.white,
-                        size: 30,
+                        size: 30.rsp,
                       ),
                     ),
                   ),
-                  SizedBox(height: 12),
+                  SizedBox(height: 12.rh),
                   Text(
                     example.title,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 30.rsp,
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
                     ),
@@ -236,11 +237,11 @@ class HomePage extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 6),
+                  SizedBox(height: 6.rh),
                   Text(
                     example.subtitle,
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 15.rsp,
                       color: Colors.grey[600],
                       height: 1.3,
                     ),
@@ -248,8 +249,8 @@ class HomePage extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 8),
-                  Icon(Icons.arrow_forward, size: 30, color: example.color),
+                  SizedBox(height: 8.rh),
+                  Icon(Icons.arrow_forward, size: 30.rsp, color: example.color),
                 ],
               ),
             ),
