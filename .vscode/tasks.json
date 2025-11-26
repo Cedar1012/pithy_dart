@@ -1,0 +1,56 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "运行测试",
+      "type": "shell",
+      "command": "fvm flutter test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "运行示例应用",
+      "type": "shell",
+      "command": "cd example && fvm flutter run",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "pub get (主项目)",
+      "type": "shell",
+      "command": "export PUB_HOSTED_URL='https://pub.dev' && fvm flutter pub get",
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "pub get (example)",
+      "type": "shell",
+      "command": "export PUB_HOSTED_URL='https://pub.dev' && cd example && fvm flutter pub get",
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "分析代码",
+      "type": "shell",
+      "command": "fvm flutter analyze",
+      "presentation": {
+        "reveal": "always"
+      }
+    }
+  ]
+}
+
