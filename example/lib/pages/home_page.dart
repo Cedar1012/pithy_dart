@@ -159,12 +159,12 @@ class HomePage extends StatelessWidget {
           }
 
           return GridView.builder(
-            padding: EdgeInsets.all(20.w),
+            padding: EdgeInsets.all(20),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: crossAxisCount,
               childAspectRatio: childAspectRatio,
-              crossAxisSpacing: 16.w,
-              mainAxisSpacing: 16.h,
+              crossAxisSpacing: 16,
+              mainAxisSpacing: 16,
             ),
             itemCount: examples.length,
             itemBuilder: (context, index) {
@@ -182,37 +182,37 @@ class HomePage extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: Material(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12.r),
+        borderRadius: BorderRadius.circular(12),
         elevation: 1,
         shadowColor: example.color.withOpacity(0.2),
         child: InkWell(
           onTap: () {
             context.navigator.pushMaterial(example.page);
           },
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           child: Center(
             child: Padding(
-              padding: EdgeInsets.all(12.w),
+              padding: EdgeInsets.all(12),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 80.w,
-                    height: 80.w,
+                    width: 80,
+                    height: 80,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [example.color.withOpacity(0.8), example.color],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
-                      borderRadius: BorderRadius.circular(16.r),
+                      borderRadius: BorderRadius.circular(16),
                       boxShadow: [
                         BoxShadow(
                           color: example.color.withOpacity(0.25),
-                          blurRadius: 8.r,
-                          offset: Offset(0, 3.h),
+                          blurRadius: 8,
+                          offset: Offset(0, 3),
                         ),
                       ],
                     ),
@@ -220,15 +220,15 @@ class HomePage extends StatelessWidget {
                       child: Icon(
                         example.icon,
                         color: Colors.white,
-                        size: 30.sp,
+                        size: 30,
                       ),
                     ),
                   ),
-                  SizedBox(height: 12.h),
+                  SizedBox(height: 12),
                   Text(
                     example.title,
                     style: TextStyle(
-                      fontSize: 30.sp,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.black87,
                     ),
@@ -236,11 +236,11 @@ class HomePage extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 6.h),
+                  SizedBox(height: 6),
                   Text(
                     example.subtitle,
                     style: TextStyle(
-                      fontSize: 15.sp,
+                      fontSize: 15,
                       color: Colors.grey[600],
                       height: 1.3,
                     ),
@@ -248,8 +248,8 @@ class HomePage extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 8.h),
-                  Icon(Icons.arrow_forward, size: 30.sp, color: example.color),
+                  SizedBox(height: 8),
+                  Icon(Icons.arrow_forward, size: 30, color: example.color),
                 ],
               ),
             ),

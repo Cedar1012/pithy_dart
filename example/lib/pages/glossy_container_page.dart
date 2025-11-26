@@ -29,18 +29,18 @@ GlossyContainer(
 
 // 设置大小
 GlossyContainer(
-  width: 200.w,
-  height: 100.h,
+  width: 200,
+  height: 100,
   child: Text('内容'),
 )''',
         builder: (context) => GlossyContainer(
-          width: 200.w,
-          height: 100.h,
+          width: 200,
+          height: 100,
           child: Center(
             child: Text(
               '毛玻璃效果',
               style: TextStyle(
-                fontSize: 16.sp,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -54,16 +54,16 @@ GlossyContainer(
         code: 'GlossyContainer(padding: EdgeInsets.all(20))',
         detailCode: '''// 设置内边距
 GlossyContainer(
-  width: 200.w,
-  height: 100.h,
+  width: 200,
+  height: 100,
   padding: EdgeInsets.all(20),
   child: Text('内容'),
 )
 
 // 不同方向的内边距
 GlossyContainer(
-  width: 200.w,
-  height: 100.h,
+  width: 200,
+  height: 100,
   padding: EdgeInsets.symmetric(
     horizontal: 20,
     vertical: 10,
@@ -71,13 +71,13 @@ GlossyContainer(
   child: Text('内容'),
 )''',
         builder: (context) => GlossyContainer(
-          width: 180.w,
-          height: 90.h,
-          padding: EdgeInsets.all(20.w),
+          width: 180,
+          height: 90,
+          padding: EdgeInsets.all(20),
           child: Center(
             child: Text(
               '带内边距',
-              style: TextStyle(color: Colors.white, fontSize: 14.sp, fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
             ),
           ),
         ),
@@ -88,28 +88,28 @@ GlossyContainer(
         code: 'GlossyContainer(color: Colors.blue)',
         detailCode: '''// 设置背景颜色
 GlossyContainer(
-  width: 200.w,
-  height: 100.h,
+  width: 200,
+  height: 100,
   color: Colors.blue.withOpacity(0.3),
   child: Text('内容'),
 )
 
 // 不同颜色
 GlossyContainer(
-  width: 200.w,
-  height: 100.h,
+  width: 200,
+  height: 100,
   color: Colors.purple.withOpacity(0.3),
   child: Text('内容'),
 )''',
         builder: (context) => GlossyContainer(
-          width: 200.w,
-          height: 100.h,
+          width: 200,
+          height: 100,
           color: Colors.blue.withOpacity(0.3),
           child: Center(
             child: Text(
               '蓝色毛玻璃',
               style: TextStyle(
-                fontSize: 16.sp,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -123,7 +123,7 @@ GlossyContainer(
         code: 'GlossyContainer(borderRadius: BorderRadius.circular(20))',
         detailCode: '''// 设置圆角
 GlossyContainer(
-  width: 150.w,
+  width: 150,
   height: 150,
   borderRadius: BorderRadius.circular(20),
   child: ...,
@@ -131,7 +131,7 @@ GlossyContainer(
 
 // 添加边框
 GlossyContainer(
-  width: 150.w,
+  width: 150,
   height: 150,
   borderRadius: BorderRadius.circular(20),
   border: Border.all(
@@ -143,13 +143,13 @@ GlossyContainer(
 
 // 圆形
 GlossyContainer(
-  width: 150.w,
+  width: 150,
   height: 150,
   borderRadius: BorderRadius.circular(75),
   child: ...,
 )''',
         builder: (context) => GlossyContainer(
-          width: 150.w,
+          width: 150,
           height: 150,
           borderRadius: BorderRadius.circular(75),
           border: Border.all(
@@ -159,7 +159,7 @@ GlossyContainer(
           child: Center(
             child: Icon(
               Icons.favorite,
-              size: 48.sp,
+              size: 48,
               color: Colors.white,
             ),
           ),
@@ -171,13 +171,13 @@ GlossyContainer(
         code: 'GlossyContainer(boxShadow: [BoxShadow(...)])',
         detailCode: '''// 添加阴影
 GlossyContainer(
-  width: 180.w,
-  height: 100.h,
+  width: 180,
+  height: 100,
   boxShadow: [
     BoxShadow(
       color: Colors.black.withOpacity(0.3),
       blurRadius: 20,
-      offset: Offset(0, 10.h),
+      offset: Offset(0, 10),
     ),
   ],
   child: ...,
@@ -185,8 +185,8 @@ GlossyContainer(
 
 // 多重阴影
 GlossyContainer(
-  width: 180.w,
-  height: 100.h,
+  width: 180,
+  height: 100,
   boxShadow: [
     BoxShadow(
       color: Colors.blue.withOpacity(0.5),
@@ -200,14 +200,14 @@ GlossyContainer(
   child: ...,
 )''',
         builder: (context) => GlossyContainer(
-          width: 180.w,
-          height: 100.h,
-          borderRadius: BorderRadius.circular(16.r),
+          width: 180,
+          height: 100,
+          borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
               color: Colors.blue.withOpacity(0.5),
               blurRadius: 20,
-              offset: Offset(0, 10.h),
+              offset: Offset(0, 10),
             ),
           ],
           child: Center(
@@ -229,7 +229,7 @@ GlossyContainer(
         detailCode: '''// 综合使用
 GlossyContainer(
   width: 220,
-  height: 120.h,
+  height: 120,
   color: Colors.blue.withOpacity(0.3),
   borderRadius: BorderRadius.circular(20),
   border: Border.all(
@@ -240,7 +240,7 @@ GlossyContainer(
     BoxShadow(
       color: Colors.black.withOpacity(0.2),
       blurRadius: 30,
-      offset: Offset(0, 10.h),
+      offset: Offset(0, 10),
     ),
   ],
   padding: EdgeInsets.all(16),
@@ -249,13 +249,13 @@ GlossyContainer(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
       Text('标题', style: TextStyle(
-        fontSize: 20.sp,
+        fontSize: 20,
         fontWeight: FontWeight.bold,
         color: Colors.white,
       )),
-      SizedBox(height: 8.h),
+      SizedBox(height: 8),
       Text('描述文字', style: TextStyle(
-        fontSize: 14.sp,
+        fontSize: 14,
         color: Colors.white70,
       )),
     ],
@@ -263,7 +263,7 @@ GlossyContainer(
 )''',
         builder: (context) => GlossyContainer(
           width: 220,
-          height: 120.h,
+          height: 120,
           color: Colors.blue.withOpacity(0.3),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
@@ -274,10 +274,10 @@ GlossyContainer(
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
               blurRadius: 30,
-              offset: Offset(0, 10.h),
+              offset: Offset(0, 10),
             ),
           ],
-          padding: EdgeInsets.all(16.w),
+          padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -285,16 +285,16 @@ GlossyContainer(
               Text(
                 '完整示例',
                 style: TextStyle(
-                  fontSize: 20.sp,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 8.h),
+              SizedBox(height: 8),
               Text(
                 '毛玻璃卡片',
                 style: TextStyle(
-                  fontSize: 14.sp,
+                  fontSize: 14,
                   color: Colors.white70,
                 ),
               ),
@@ -312,10 +312,10 @@ GlossyContainer(
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24.w),
+        padding: EdgeInsets.all(24),
         child: Wrap(
-          spacing: 20.w,
-          runSpacing: 20.h,
+          spacing: 20,
+          runSpacing: 20,
           children: examples.asMap().entries.map((entry) {
             return _buildExampleCard(entry.value, entry.key, context);
           }).toList(),
@@ -326,15 +326,15 @@ GlossyContainer(
 
   Widget _buildExampleCard(_ExampleItem item, int index, BuildContext context) {
     return Container(
-      width: 420.w,
+      width: 420,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.06),
-            blurRadius: 12.r,
-            offset: Offset(0, 3.h),
+            blurRadius: 12,
+            offset: Offset(0, 3),
           ),
         ],
       ),
@@ -343,24 +343,24 @@ GlossyContainer(
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(24.w, 20.h, 24.w, 16.h),
+            padding: EdgeInsets.fromLTRB(24, 20, 24, 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   item.title,
                   style: TextStyle(
-                    fontSize: 32.sp,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     letterSpacing: -0.5,
                   ),
                 ),
-                SizedBox(height: 6.h),
+                SizedBox(height: 6),
                 Text(
                   item.description,
                   style: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     color: Colors.grey[600],
                     height: 1.3,
                   ),
@@ -369,25 +369,25 @@ GlossyContainer(
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 24.w),
-            padding: EdgeInsets.all(24.w),
-            height: 220.h,
+            margin: EdgeInsets.symmetric(horizontal: 24),
+            padding: EdgeInsets.all(24),
+            height: 220,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Colors.blue[300]!, Colors.purple[300]!],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-              borderRadius: BorderRadius.circular(12.r),
-              border: Border.all(color: Colors.grey[200]!, width: 1.w),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!, width: 1),
             ),
             child: Center(
               child: item.builder(context),
             ),
           ),
-          SizedBox(height: 16.h),
+          SizedBox(height: 16),
           Padding(
-            padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 24.h),
+            padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -396,7 +396,7 @@ GlossyContainer(
                   code: item.code,
                   onCopy: () => _copyToClipboard(item.code, context),
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 16),
                 _buildCodeBlock(
                   title: '调用详情',
                   code: item.detailCode,
@@ -418,14 +418,14 @@ GlossyContainer(
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: Colors.blue[100]!, width: 1.5.w),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.blue[100]!, width: 1.5),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: BoxDecoration(
               color: Colors.blue[100],
               borderRadius: const BorderRadius.only(
@@ -439,26 +439,26 @@ GlossyContainer(
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.blue[900],
                   ),
                 ),
                 InkWell(
                   onTap: onCopy,
-                  borderRadius: BorderRadius.circular(6.r),
+                  borderRadius: BorderRadius.circular(6),
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
-                      borderRadius: BorderRadius.circular(6.r),
+                      borderRadius: BorderRadius.circular(6),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.copy, size: 16.sp, color: Colors.white),
-                        SizedBox(width: 6.w),
-                        Text('复制', style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600, color: Colors.white)),
+                        Icon(Icons.copy, size: 16, color: Colors.white),
+                        SizedBox(width: 6),
+                        Text('复制', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white)),
                       ],
                     ),
                   ),
@@ -467,12 +467,12 @@ GlossyContainer(
             ),
           ),
           Container(
-            padding: EdgeInsets.all(16.w),
+            padding: EdgeInsets.all(16),
             child: Text(
               code,
               style: TextStyle(
                 fontFamily: 'monospace',
-                fontSize: 15.sp,
+                fontSize: 15,
                 color: Colors.blue[900],
                 height: 1.6,
               ),

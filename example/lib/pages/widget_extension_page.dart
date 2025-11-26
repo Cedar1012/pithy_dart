@@ -40,7 +40,7 @@ widget.padding(left: 10, top: 20, right: 10, bottom: 20)''',
         builder: (context) => Container()
             .backgroundColor(Colors.blue.shade100)
             .padding(all: 16)
-            .child(Text('padding', style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500))),
+            .child(Text('padding', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500))),
       ),
       _ExampleItem(
         title: 'backgroundColor',
@@ -52,7 +52,7 @@ widget.backgroundColor(Colors.purple)
 // 支持动画
 widget.backgroundColor(Colors.blue, animate: true)''',
         builder: (context) => Text('背景色',
-                style: TextStyle(fontSize: 16.sp, color: Colors.white, fontWeight: FontWeight.w500))
+                style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500))
             .backgroundColor(Colors.purple)
             .padding(all: 12),
       ),
@@ -70,7 +70,7 @@ widget.borderRadius(
   bottomLeft: 0, 
   bottomRight: 0
 )''',
-        builder: (context) => Container(width: 70, height: 70.h)
+        builder: (context) => Container(width: 70, height: 70)
             .backgroundColor(Colors.orange)
             .borderRadius(all: 15)
             .center(),
@@ -83,15 +83,15 @@ widget.borderRadius(
 widget.boxShadow(
   color: Colors.blue.withOpacity(0.3),
   blurRadius: 8,
-  offset: Offset(0, 3.h),
+  offset: Offset(0, 3),
 )''',
-        builder: (context) => Container(width: 90, height: 60.h)
+        builder: (context) => Container(width: 90, height: 60)
             .backgroundColor(Colors.white)
             .borderRadius(all: 8)
             .boxShadow(
               color: Colors.blue.withOpacity(0.3),
               blurRadius: 8,
-              offset: Offset(0, 3.h),
+              offset: Offset(0, 3),
             )
             .center(),
       ),
@@ -129,7 +129,7 @@ widget.opacity(0.0)
 // 完全不透明
 widget.opacity(1.0)''',
         builder: (context) => Text('透明度',
-                style: TextStyle(fontSize: 16.sp, color: Colors.white, fontWeight: FontWeight.w500))
+                style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500))
             .padding(all: 12)
             .backgroundColor(Colors.red)
             .opacity(0.5)
@@ -147,7 +147,7 @@ widget.rotate(angle: pi / 2)
 
 // 旋转 180 度
 widget.rotate(angle: pi)''',
-        builder: (context) => Container(width: 60, height: 60.h)
+        builder: (context) => Container(width: 60, height: 60)
             .backgroundColor(Colors.teal)
             .rotate(angle: 0.3)
             .center(),
@@ -189,11 +189,11 @@ widget.alignBottom()''',
             Container(width: 40, height: 40)
                 .backgroundColor(Colors.red)
                 .alignLeft(),
-            SizedBox(height: 6.h),
+            SizedBox(height: 6),
             Container(width: 40, height: 40)
                 .backgroundColor(Colors.green)
                 .alignCenter(),
-            SizedBox(height: 6.h),
+            SizedBox(height: 6),
             Container(width: 40, height: 40)
                 .backgroundColor(Colors.blue)
                 .alignRight(),
@@ -219,7 +219,7 @@ widget.onLongPress(() {
   print('长按');
 })''',
         builder: (context) =>
-            Text('点击', style: TextStyle(fontSize: 16.sp, color: Colors.white, fontWeight: FontWeight.w500))
+            Text('点击', style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500))
                 .padding(all: 14)
                 .backgroundColor(Colors.blue)
                 .borderRadius(all: 8)
@@ -242,7 +242,7 @@ widget.ripple()
 // 自定义涟漪颜色
 widget.ripple(splashColor: Colors.blue)''',
         builder: (context) => Text('涟漪',
-                style: TextStyle(fontSize: 16.sp, color: Colors.black87, fontWeight: FontWeight.w500))
+                style: TextStyle(fontSize: 16, color: Colors.black87, fontWeight: FontWeight.w500))
             .padding(all: 14)
             .backgroundColor(Colors.purple.shade100)
             .borderRadius(all: 8)
@@ -260,7 +260,7 @@ widget.elevation(8)
 widget.elevation(2)  // 轻微阴影
 widget.elevation(8)  // 中等阴影
 widget.elevation(16) // 强阴影''',
-        builder: (context) => Container(width: 90, height: 60.h)
+        builder: (context) => Container(width: 90, height: 60)
             .backgroundColor(Colors.white)
             .borderRadius(all: 8)
             .elevation(8)
@@ -297,7 +297,7 @@ Curves.elasticOut''',
                   Curves.easeInOut,
                 )
                 .center(),
-            SizedBox(height: 8.h),
+            SizedBox(height: 8),
             ElevatedButton(
               onPressed: () {
                 setState(() {
@@ -305,7 +305,7 @@ Curves.elasticOut''',
                 });
               },
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 minimumSize: const Size(0, 0),
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
               ),
@@ -329,7 +329,7 @@ widget.backgroundLinearGradient(
 widget.backgroundRadialGradient(
   colors: [Colors.yellow, Colors.orange],
 )''',
-        builder: (context) => Container(height: 70.h)
+        builder: (context) => Container(height: 70)
             .backgroundLinearGradient(
               colors: [Colors.purple, Colors.blue],
               begin: Alignment.topLeft,
@@ -371,10 +371,10 @@ widget.expanded(flex: 2)''',
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24.w),
+        padding: EdgeInsets.all(24),
         child: Wrap(
-          spacing: 20.w,
-          runSpacing: 20.h,
+          spacing: 20,
+          runSpacing: 20,
           children: examples.asMap().entries.map((entry) {
             return _buildExampleCard(entry.value, entry.key);
           }).toList(),
@@ -385,15 +385,15 @@ widget.expanded(flex: 2)''',
 
   Widget _buildExampleCard(_ExampleItem item, int index) {
     return Container(
-      width: 420.w,
+      width: 420,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.06),
-            blurRadius: 12.r,
-            offset: Offset(0, 3.h),
+            blurRadius: 12,
+            offset: Offset(0, 3),
           ),
         ],
       ),
@@ -403,24 +403,24 @@ widget.expanded(flex: 2)''',
         children: [
           // 标题和描述
           Container(
-            padding: EdgeInsets.fromLTRB(24.w, 20.h, 24.w, 16.h),
+            padding: EdgeInsets.fromLTRB(24, 20, 24, 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   item.title,
                   style: TextStyle(
-                    fontSize: 32.sp,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     letterSpacing: -0.5,
                   ),
                 ),
-                SizedBox(height: 6.h),
+                SizedBox(height: 6),
                 Text(
                   item.description,
                   style: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     color: Colors.grey[600],
                     height: 1.3,
                   ),
@@ -431,13 +431,13 @@ widget.expanded(flex: 2)''',
           
           // 效果图
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 24.w),
-            padding: EdgeInsets.all(24.w),
-            height: 220.h,
+            margin: EdgeInsets.symmetric(horizontal: 24),
+            padding: EdgeInsets.all(24),
+            height: 220,
             decoration: BoxDecoration(
               color: Colors.grey[50],
-              borderRadius: BorderRadius.circular(12.r),
-              border: Border.all(color: Colors.grey[200]!, width: 1.w),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!, width: 1),
             ),
             child: Transform.scale(
               scale: 1.3,
@@ -445,11 +445,11 @@ widget.expanded(flex: 2)''',
             ),
           ),
           
-          SizedBox(height: 16.h),
+          SizedBox(height: 16),
           
           // 代码区域
           Padding(
-            padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 24.h),
+            padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -460,7 +460,7 @@ widget.expanded(flex: 2)''',
                   onCopy: () => _copyToClipboard(item.code, context),
                 ),
                 
-                SizedBox(height: 16.h),
+                SizedBox(height: 16),
                 
                 // 详细调用
                 _buildCodeBlock(
@@ -484,15 +484,15 @@ widget.expanded(flex: 2)''',
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: Colors.blue[100]!, width: 1.5.w),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.blue[100]!, width: 1.5),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // 标题栏 + 复制按钮
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: BoxDecoration(
               color: Colors.blue[100],
               borderRadius: const BorderRadius.only(
@@ -506,33 +506,33 @@ widget.expanded(flex: 2)''',
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.blue[900],
                   ),
                 ),
                 InkWell(
                   onTap: onCopy,
-                  borderRadius: BorderRadius.circular(6.r),
+                  borderRadius: BorderRadius.circular(6),
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
-                      borderRadius: BorderRadius.circular(6.r),
+                      borderRadius: BorderRadius.circular(6),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(
                           Icons.copy,
-                          size: 16.sp,
+                          size: 16,
                           color: Colors.white,
                         ),
-                        SizedBox(width: 6.w),
+                        SizedBox(width: 6),
                         Text(
                           '复制',
                           style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: Colors.white,
                           ),
@@ -547,12 +547,12 @@ widget.expanded(flex: 2)''',
           
           // 代码内容
           Container(
-            padding: EdgeInsets.all(16.w),
+            padding: EdgeInsets.all(16),
             child: Text(
               code,
               style: TextStyle(
                 fontFamily: 'monospace',
-                fontSize: 15.sp,
+                fontSize: 15,
                 color: Colors.blue[900],
                 height: 1.6,
               ),

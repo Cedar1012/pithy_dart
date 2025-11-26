@@ -32,9 +32,9 @@ class StringExtensionPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             _buildExample('输入', 'hello world', 16),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             Icon(Icons.arrow_downward, size: 30, color: Colors.blue),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             _buildExample('输出', 'hello world'.capitalize(), 18),
           ],
         ),
@@ -53,9 +53,9 @@ class StringExtensionPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             _buildExample('输入', 'hello world', 16),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             Icon(Icons.arrow_downward, size: 30, color: Colors.blue),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             _buildExample('输出', 'hello world'.capitalizeFirst(), 18),
           ],
         ),
@@ -78,9 +78,9 @@ class StringExtensionPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildExample('"123".isNum()', '123'.isNum().toString(), 16),
-            SizedBox(height: 8.h),
+            SizedBox(height: 8),
             _buildExample('"abc".isNum()', 'abc'.isNum().toString(), 16),
-            SizedBox(height: 8.h),
+            SizedBox(height: 8),
             _buildExample('"123".toNum()', '123'.toNum().toString(), 16),
           ],
         ),
@@ -101,7 +101,7 @@ class StringExtensionPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildExample('"456".isInt()', '456'.isInt().toString(), 16),
-            SizedBox(height: 8.h),
+            SizedBox(height: 8),
             _buildExample('"456".toInt()', '456'.toInt().toString(), 16),
           ],
         ),
@@ -140,9 +140,9 @@ class StringExtensionPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             _buildExample('输入', '  hello   world  ', 16),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             Icon(Icons.arrow_downward, size: 30, color: Colors.blue),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             _buildExample('输出', '  hello   world  '.removeAllWhitespace(), 18),
           ],
         ),
@@ -161,9 +161,9 @@ class StringExtensionPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             _buildExample('输入', '<p>Hello <b>World</b></p>', 14),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             Icon(Icons.arrow_downward, size: 30, color: Colors.blue),
-            SizedBox(height: 12.h),
+            SizedBox(height: 12),
             _buildExample('输出', '<p>Hello <b>World</b></p>'.clearHtml, 18),
           ],
         ),
@@ -187,7 +187,7 @@ class StringExtensionPage extends StatelessWidget {
           children: [
             _buildExample('"email@test.com".hasMatch(r"@")', 
                 'email@test.com'.hasMatch(r'@').toString(), 16),
-            SizedBox(height: 8.h),
+            SizedBox(height: 8),
             _buildExample('"123abc".hasMatch(r"\\d")', 
                 '123abc'.hasMatch(r'\d').toString(), 16),
           ],
@@ -203,10 +203,10 @@ class StringExtensionPage extends StatelessWidget {
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24.w),
+        padding: EdgeInsets.all(24),
         child: Wrap(
-          spacing: 20.w,
-          runSpacing: 20.h,
+          spacing: 20,
+          runSpacing: 20,
           children: examples.asMap().entries.map((entry) {
             return _buildExampleCard(entry.value, entry.key, context);
           }).toList(),
@@ -220,7 +220,7 @@ class StringExtensionPage extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         color: Colors.grey[100],
-        borderRadius: BorderRadius.circular(8.r),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.grey[300]!),
       ),
       child: Column(
@@ -233,7 +233,7 @@ class StringExtensionPage extends StatelessWidget {
               color: Colors.grey[600],
             ),
           ),
-          SizedBox(height: 4.h),
+          SizedBox(height: 4),
           Text(
             value,
             style: TextStyle(
@@ -253,11 +253,11 @@ class StringExtensionPage extends StatelessWidget {
       children: [
         Container(
           width: 70,
-          height: 70.h,
+          height: 70,
           decoration: BoxDecoration(
             color: color,
-            borderRadius: BorderRadius.circular(12.r),
-            border: Border.all(color: Colors.grey[300]!, width: 2.w),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Colors.grey[300]!, width: 2),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.1),
@@ -267,11 +267,11 @@ class StringExtensionPage extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 8.h),
+        SizedBox(height: 8),
         Text(
           '#$hex',
           style: TextStyle(
-            fontSize: 14.sp,
+            fontSize: 14,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -281,15 +281,15 @@ class StringExtensionPage extends StatelessWidget {
 
   Widget _buildExampleCard(_ExampleItem item, int index, BuildContext context) {
     return Container(
-      width: 420.w,
+      width: 420,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.06),
-            blurRadius: 12.r,
-            offset: Offset(0, 3.h),
+            blurRadius: 12,
+            offset: Offset(0, 3),
           ),
         ],
       ),
@@ -299,24 +299,24 @@ class StringExtensionPage extends StatelessWidget {
         children: [
           // 标题和描述
           Container(
-            padding: EdgeInsets.fromLTRB(24.w, 20.h, 24.w, 16.h),
+            padding: EdgeInsets.fromLTRB(24, 20, 24, 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   item.title,
                   style: TextStyle(
-                    fontSize: 32.sp,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     letterSpacing: -0.5,
                   ),
                 ),
-                SizedBox(height: 6.h),
+                SizedBox(height: 6),
                 Text(
                   item.description,
                   style: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     color: Colors.grey[600],
                     height: 1.3,
                   ),
@@ -327,24 +327,24 @@ class StringExtensionPage extends StatelessWidget {
           
           // 效果图
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 24.w),
-            padding: EdgeInsets.all(24.w),
-            height: 220.h,
+            margin: EdgeInsets.symmetric(horizontal: 24),
+            padding: EdgeInsets.all(24),
+            height: 220,
             decoration: BoxDecoration(
               color: Colors.grey[50],
-              borderRadius: BorderRadius.circular(12.r),
-              border: Border.all(color: Colors.grey[200]!, width: 1.w),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!, width: 1),
             ),
             child: Center(
               child: item.builder(context),
             ),
           ),
           
-          SizedBox(height: 16.h),
+          SizedBox(height: 16),
           
           // 代码区域
           Padding(
-            padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 24.h),
+            padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -355,7 +355,7 @@ class StringExtensionPage extends StatelessWidget {
                   onCopy: () => _copyToClipboard(item.code, context),
                 ),
                 
-                SizedBox(height: 16.h),
+                SizedBox(height: 16),
                 
                 // 详细调用
                 _buildCodeBlock(
@@ -379,15 +379,15 @@ class StringExtensionPage extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: Colors.blue[100]!, width: 1.5.w),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.blue[100]!, width: 1.5),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // 标题栏 + 复制按钮
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: BoxDecoration(
               color: Colors.blue[100],
               borderRadius: const BorderRadius.only(
@@ -401,33 +401,33 @@ class StringExtensionPage extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.blue[900],
                   ),
                 ),
                 InkWell(
                   onTap: onCopy,
-                  borderRadius: BorderRadius.circular(6.r),
+                  borderRadius: BorderRadius.circular(6),
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
-                      borderRadius: BorderRadius.circular(6.r),
+                      borderRadius: BorderRadius.circular(6),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(
                           Icons.copy,
-                          size: 16.sp,
+                          size: 16,
                           color: Colors.white,
                         ),
-                        SizedBox(width: 6.w),
+                        SizedBox(width: 6),
                         Text(
                           '复制',
                           style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: Colors.white,
                           ),
@@ -442,12 +442,12 @@ class StringExtensionPage extends StatelessWidget {
           
           // 代码内容
           Container(
-            padding: EdgeInsets.all(16.w),
+            padding: EdgeInsets.all(16),
             child: Text(
               code,
               style: TextStyle(
                 fontFamily: 'monospace',
-                fontSize: 15.sp,
+                fontSize: 15,
                 color: Colors.blue[900],
                 height: 1.6,
               ),

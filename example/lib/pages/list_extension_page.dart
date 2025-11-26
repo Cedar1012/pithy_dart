@@ -111,7 +111,7 @@ class ListExtensionPage extends StatelessWidget {
                 [
                       Container(
                         width: 100,
-                        height: 100.h,
+                        height: 100,
                         color: Colors.red.shade200,
                       ),
                       Container(
@@ -121,7 +121,7 @@ class ListExtensionPage extends StatelessWidget {
                       ).positioned(left: 20, top: 20),
                       Container(
                         width: 60,
-                        height: 60.h,
+                        height: 60,
                         color: Colors.blue.shade200,
                       ).positioned(left: 40, top: 40),
                     ]
@@ -134,18 +134,18 @@ class ListExtensionPage extends StatelessWidget {
       _ExampleItem(
         title: 'toWrap',
         description: '自动换行布局',
-        code: '[...widgets].toWrap(spacing: 8.w)',
+        code: '[...widgets].toWrap(spacing: 8)',
         detailCode: '''// 基本用法
 [widget1, widget2, widget3].toWrap()
 
 // 设置间距
 [...widgets].toWrap(
-  spacing: 8.w,      // 水平间距
-  runSpacing: 8.h,   // 垂直间距
+  spacing: 8,      // 水平间距
+  runSpacing: 8,   // 垂直间距
 )''',
         builder:
             (context) => _buildManyItems()
-                .toWrap(spacing: 8.w, runSpacing: 8.h)
+                .toWrap(spacing: 8, runSpacing: 8)
                 .backgroundColor(Colors.grey[100]!)
                 .padding(all: 12)
                 .borderRadius(all: 8),
@@ -166,7 +166,7 @@ class ListExtensionPage extends StatelessWidget {
               height: 180,
               decoration: BoxDecoration(
                 color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(8.r),
+                borderRadius: BorderRadius.circular(8),
               ),
               child: _buildScrollableItems().toListView(),
             ),
@@ -193,13 +193,13 @@ class ListExtensionPage extends StatelessWidget {
                   Text(
                     '标题',
                     style: TextStyle(
-                      fontSize: 20.sp,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     '这是一个实际应用示例',
-                    style: TextStyle(fontSize: 14.sp, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                   ),
                   [
                     Container(
@@ -209,7 +209,7 @@ class ListExtensionPage extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         color: Colors.blue,
-                        borderRadius: BorderRadius.circular(12.r),
+                        borderRadius: BorderRadius.circular(12),
                       ),
                       child: const Text(
                         '标签1',
@@ -223,7 +223,7 @@ class ListExtensionPage extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         color: Colors.green,
-                        borderRadius: BorderRadius.circular(12.r),
+                        borderRadius: BorderRadius.circular(12),
                       ),
                       child: const Text(
                         '标签2',
@@ -256,10 +256,10 @@ class ListExtensionPage extends StatelessWidget {
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24.w),
+        padding: EdgeInsets.all(24),
         child: Wrap(
-          spacing: 20.w,
-          runSpacing: 20.h,
+          spacing: 20,
+          runSpacing: 20,
           children:
               examples.asMap().entries.map((entry) {
                 return _buildExampleCard(entry.value, entry.key, context);
@@ -271,15 +271,15 @@ class ListExtensionPage extends StatelessWidget {
 
   Widget _buildExampleCard(_ExampleItem item, int index, BuildContext context) {
     return Container(
-      width: 420.w,
+      width: 420,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.06),
-            blurRadius: 12.r,
-            offset: Offset(0, 3.h),
+            blurRadius: 12,
+            offset: Offset(0, 3),
           ),
         ],
       ),
@@ -289,24 +289,24 @@ class ListExtensionPage extends StatelessWidget {
         children: [
           // 标题和描述
           Container(
-            padding: EdgeInsets.fromLTRB(24.w, 20.h, 24.w, 16.h),
+            padding: EdgeInsets.fromLTRB(24, 20, 24, 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   item.title,
                   style: TextStyle(
-                    fontSize: 32.sp,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     letterSpacing: -0.5,
                   ),
                 ),
-                SizedBox(height: 6.h),
+                SizedBox(height: 6),
                 Text(
                   item.description,
                   style: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     color: Colors.grey[600],
                     height: 1.3,
                   ),
@@ -317,22 +317,22 @@ class ListExtensionPage extends StatelessWidget {
 
           // 效果图
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 24.w),
-            padding: EdgeInsets.all(24.w),
-            height: 220.h,
+            margin: EdgeInsets.symmetric(horizontal: 24),
+            padding: EdgeInsets.all(24),
+            height: 220,
             decoration: BoxDecoration(
               color: Colors.grey[50],
-              borderRadius: BorderRadius.circular(12.r),
-              border: Border.all(color: Colors.grey[200]!, width: 1.w),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!, width: 1),
             ),
             child: Center(child: item.builder(context)),
           ),
 
-          SizedBox(height: 16.h),
+          SizedBox(height: 16),
 
           // 代码区域
           Padding(
-            padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 24.h),
+            padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -343,7 +343,7 @@ class ListExtensionPage extends StatelessWidget {
                   onCopy: () => _copyToClipboard(item.code, context),
                 ),
 
-                SizedBox(height: 16.h),
+                SizedBox(height: 16),
 
                 // 详细调用
                 _buildCodeBlock(
@@ -367,15 +367,15 @@ class ListExtensionPage extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: Colors.blue[100]!, width: 1.5.w),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.blue[100]!, width: 1.5),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // 标题栏 + 复制按钮
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: BoxDecoration(
               color: Colors.blue[100],
               borderRadius: const BorderRadius.only(
@@ -389,14 +389,14 @@ class ListExtensionPage extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.blue[900],
                   ),
                 ),
                 InkWell(
                   onTap: onCopy,
-                  borderRadius: BorderRadius.circular(6.r),
+                  borderRadius: BorderRadius.circular(6),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 12,
@@ -404,17 +404,17 @@ class ListExtensionPage extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
-                      borderRadius: BorderRadius.circular(6.r),
+                      borderRadius: BorderRadius.circular(6),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.copy, size: 16.sp, color: Colors.white),
-                        SizedBox(width: 6.w),
+                        Icon(Icons.copy, size: 16, color: Colors.white),
+                        SizedBox(width: 6),
                         Text(
                           '复制',
                           style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: Colors.white,
                           ),
@@ -429,12 +429,12 @@ class ListExtensionPage extends StatelessWidget {
 
           // 代码内容
           Container(
-            padding: EdgeInsets.all(16.w),
+            padding: EdgeInsets.all(16),
             child: Text(
               code,
               style: TextStyle(
                 fontFamily: 'monospace',
-                fontSize: 15.sp,
+                fontSize: 15,
                 color: Colors.blue[900],
                 height: 1.6,
               ),
@@ -468,7 +468,7 @@ class ListExtensionPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         decoration: BoxDecoration(
           color: Colors.primaries[index % Colors.primaries.length].shade100,
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Text('项${index + 1}', style: TextStyle(fontSize: 12)),
       ),

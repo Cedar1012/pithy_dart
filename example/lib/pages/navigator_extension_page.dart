@@ -40,7 +40,7 @@ Navigator.of(context).push(
             );
           },
           style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12.h),
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           ),
           child: const Text('跳转测试', style: TextStyle(fontSize: 16)),
         ),
@@ -64,7 +64,7 @@ context.navigator.pushCupertino(
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.blue,
-            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12.h),
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           ),
           child: const Text('iOS风格跳转', style: TextStyle(fontSize: 16)),
         ),
@@ -88,10 +88,10 @@ ElevatedButton(
   child: Text('返回'),
 )''',
         builder: (context) => Container(
-          padding: EdgeInsets.all(16.w),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: Colors.grey[100],
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(8),
           ),
           child: const Text(
             '在新页面中\n使用 context.navigator.pop()\n返回',
@@ -118,25 +118,25 @@ WillPopScope(
   child: ...,
 )''',
         builder: (context) => Container(
-          padding: EdgeInsets.all(16.w),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: Colors.orange[50],
-            borderRadius: BorderRadius.circular(8.r),
-            border: Border.all(color: Colors.orange, width: 2.w),
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(color: Colors.orange, width: 2),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.safety_check, size: 32.sp, color: Colors.orange),
-              SizedBox(height: 8.h),
+              Icon(Icons.safety_check, size: 32, color: Colors.orange),
+              SizedBox(height: 8),
               Text(
                 '安全返回',
                 style: TextStyle(
-                  fontSize: 16.sp,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 4.h),
+              SizedBox(height: 4),
               Text(
                 '如果可以返回则返回',
                 style: TextStyle(fontSize: 12),
@@ -165,19 +165,19 @@ context.navigator.popUntil(
   ModalRoute.withName('/home'),
 );''',
         builder: (context) => Container(
-          padding: EdgeInsets.all(16.w),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: Colors.blue[50],
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(8),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.layers_clear, size: 32.sp, color: Colors.blue),
-              SizedBox(height: 8.h),
+              Icon(Icons.layers_clear, size: 32, color: Colors.blue),
+              SizedBox(height: 8),
               Text(
                 '返回到指定页面',
-                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -201,10 +201,10 @@ if (context.navigator.canPop()) {
   SizedBox.shrink()
 }''',
         builder: (context) => Container(
-          padding: EdgeInsets.all(16.w),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: context.navigator.canPop() ? Colors.green[50] : Colors.red[50],
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(8),
             border: Border.all(
               color: context.navigator.canPop() ? Colors.green : Colors.red,
               width: 2,
@@ -215,14 +215,14 @@ if (context.navigator.canPop()) {
             children: [
               Icon(
                 context.navigator.canPop() ? Icons.check_circle : Icons.cancel,
-                size: 32.sp,
+                size: 32,
                 color: context.navigator.canPop() ? Colors.green : Colors.red,
               ),
-              SizedBox(height: 8.h),
+              SizedBox(height: 8),
               Text(
                 context.navigator.canPop() ? '可以返回' : '不可返回',
                 style: TextStyle(
-                  fontSize: 16.sp,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: context.navigator.canPop() ? Colors.green[700] : Colors.red[700],
                 ),
@@ -241,10 +241,10 @@ if (context.navigator.canPop()) {
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(24.w),
+        padding: EdgeInsets.all(24),
         child: Wrap(
-          spacing: 20.w,
-          runSpacing: 20.h,
+          spacing: 20,
+          runSpacing: 20,
           children: examples.asMap().entries.map((entry) {
             return _buildExampleCard(entry.value, entry.key, context);
           }).toList(),
@@ -255,15 +255,15 @@ if (context.navigator.canPop()) {
 
   Widget _buildExampleCard(_ExampleItem item, int index, BuildContext context) {
     return Container(
-      width: 420.w,
+      width: 420,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.06),
-            blurRadius: 12.r,
-            offset: Offset(0, 3.h),
+            blurRadius: 12,
+            offset: Offset(0, 3),
           ),
         ],
       ),
@@ -272,24 +272,24 @@ if (context.navigator.canPop()) {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(24.w, 20.h, 24.w, 16.h),
+            padding: EdgeInsets.fromLTRB(24, 20, 24, 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   item.title,
                   style: TextStyle(
-                    fontSize: 32.sp,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     letterSpacing: -0.5,
                   ),
                 ),
-                SizedBox(height: 6.h),
+                SizedBox(height: 6),
                 Text(
                   item.description,
                   style: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     color: Colors.grey[600],
                     height: 1.3,
                   ),
@@ -298,21 +298,21 @@ if (context.navigator.canPop()) {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 24.w),
-            padding: EdgeInsets.all(24.w),
-            height: 220.h,
+            margin: EdgeInsets.symmetric(horizontal: 24),
+            padding: EdgeInsets.all(24),
+            height: 220,
             decoration: BoxDecoration(
               color: Colors.grey[50],
-              borderRadius: BorderRadius.circular(12.r),
-              border: Border.all(color: Colors.grey[200]!, width: 1.w),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!, width: 1),
             ),
             child: Center(
               child: item.builder(context),
             ),
           ),
-          SizedBox(height: 16.h),
+          SizedBox(height: 16),
           Padding(
-            padding: EdgeInsets.fromLTRB(24.w, 0, 24.w, 24.h),
+            padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -321,7 +321,7 @@ if (context.navigator.canPop()) {
                   code: item.code,
                   onCopy: () => _copyToClipboard(item.code, context),
                 ),
-                SizedBox(height: 16.h),
+                SizedBox(height: 16),
                 _buildCodeBlock(
                   title: '调用详情',
                   code: item.detailCode,
@@ -343,14 +343,14 @@ if (context.navigator.canPop()) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.blue[50],
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: Colors.blue[100]!, width: 1.5.w),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.blue[100]!, width: 1.5),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             decoration: BoxDecoration(
               color: Colors.blue[100],
               borderRadius: const BorderRadius.only(
@@ -364,26 +364,26 @@ if (context.navigator.canPop()) {
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.blue[900],
                   ),
                 ),
                 InkWell(
                   onTap: onCopy,
-                  borderRadius: BorderRadius.circular(6.r),
+                  borderRadius: BorderRadius.circular(6),
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
-                      borderRadius: BorderRadius.circular(6.r),
+                      borderRadius: BorderRadius.circular(6),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.copy, size: 16.sp, color: Colors.white),
-                        SizedBox(width: 6.w),
-                        Text('复制', style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600, color: Colors.white)),
+                        Icon(Icons.copy, size: 16, color: Colors.white),
+                        SizedBox(width: 6),
+                        Text('复制', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white)),
                       ],
                     ),
                   ),
@@ -392,12 +392,12 @@ if (context.navigator.canPop()) {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(16.w),
+            padding: EdgeInsets.all(16),
             child: Text(
               code,
               style: TextStyle(
                 fontFamily: 'monospace',
-                fontSize: 15.sp,
+                fontSize: 15,
                 color: Colors.blue[900],
                 height: 1.6,
               ),
